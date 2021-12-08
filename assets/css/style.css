@@ -1,0 +1,333 @@
+:root{
+    --sectionborder: #853f45;
+    --black: #000000;
+    --white: #ffffff;
+  }
+
+  /*Body styling*/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    line-height: 1.5;
+  }
+
+  /*Site header*/
+header {
+    position: sticky;
+    top: 0;
+    background: linear-gradient(black, red );
+    box-shadow: 0 5px 35px rgba(237, 243, 243, 0.4);
+  }
+
+  /*Site header text*/
+header h1 {
+    margin: 6%;
+    display: inline;
+    color: white;
+    padding: 10px;
+    font-size: 45px;
+}
+
+/*Site header subtext*/
+header h3{
+    margin-left: 0%;
+    display: inline-block;
+    color: white;
+  }
+
+  /*Navigation bar for bio projects and contacts tab*/
+nav {
+    background: rgba(241, 65, 12, 0.945);
+    width: 100%;
+    display: flex;
+    flex-direction: inline;
+    flex-wrap: wrap;
+  }
+
+  /*Navigation text for the links*/
+nav a{
+    text-decoration: none;
+    color: var(--white);
+  }
+
+  /*Navigation bar animation*/
+nav a:hover {
+    color: var(--white);
+    background: var(--black);
+    border-radius: 85px;
+  }
+  
+/*Footer*/
+footer {
+    padding: 30px;
+    clear: both;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+  }
+
+/*used gradient to adjust background*/
+.background{
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background:radial-gradient(black, red);
+    background-size: cover;
+    background-position: center;
+    padding: 0;
+  }
+
+  /*Navigation lilnk flex properties*/
+.navlink {
+    flex: 1 0 20%;
+    padding: 10px 0;
+    justify-content: space-evenly;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.25s ease-in;
+    font-size: 24px;
+}
+
+/*Main content container*/
+.content-container {
+    margin: 5% 10%;
+    background: rgba(189, 119, 119, 0.596);
+  }
+
+ /*Content flex properties*/
+.content {
+    margin: 25px 10px;
+    padding: 10px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex;
+    justify-content: space-between;
+  }
+  
+/*Section picture size*/
+.section-picture{
+    border-radius: 30%;
+  }
+
+/*moves the bottom icons*/
+.left-content {
+    flex-direction: row;
+  } 
+
+  /*Flex content from right*/
+.right-content {
+    flex-direction: column;
+  }
+  
+ /*Content headings*/
+.content > h2 {
+    flex: 0 0 20%;
+    font-size: 40px;
+    line-height: 1;
+  }
+  
+  /*Content head bio and projects orientation*/
+.leftalign{
+    text-align: center;
+    padding-right: 25px;
+    border-bottom: 3px inset var(--sectionborder);
+    border-color:rgba(58, 50, 50, 0.925);
+  }
+  
+  .rightalign{
+    text-align: center;
+    padding-left: 25px;
+    border-bottom: 3px inset var(--sectionborder);
+    border-color: rgba(58, 50, 50, 0.925);
+  }
+  
+  /*Changes tiles*/
+  .content > article, .content > figure {
+    flex: 0 0 77%;
+  }
+  
+  /*Content text*/
+  .content p {
+    margin-bottom: 5px; 
+  }
+  
+  /*responsible for tiles in projects*/
+  .flex-container {
+    margin: auto;
+    display: block;
+    flex-wrap: wrap;
+    justify-content: auto;
+  }
+
+  /*Projects tabs how they look*/
+  .flex-item {
+    border-radius: 10px;
+    border-top-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border: black 10px double;
+    background-clip: content-box;
+    background-color: rgba(0, 0, 0, 0.658);
+    color: var(--white);
+    min-height: 150px;
+    max-height: 150px;
+    flex-basis: 30.7%;
+    display: flex;
+    align-items: flex-end;
+    padding: 0 0 20px 0;
+    margin: 0.5em;
+    text-decoration: none;
+    background-blend-mode: soft-light;
+    background-size: 150%;
+    transition: all 0.5s;
+    font-size: 0.9rem;
+  }
+  
+  /* changes color in projects tabs when in hover*/
+  .flex-item:hover {
+    background-color: rgba(228, 20, 20, 0.3);
+  }
+
+  /*changes tiles inside tiles in the projects*/
+  .flex-item figcaption {
+    background-color: rgba(62, 63, 58, 0.568);
+    border-radius: 30px;
+    margin: auto;
+    padding: 20px 20px;
+  }
+  
+  /*Project text in tiles*/
+  .flex-item h3 {
+    font-size: 25px;
+  }
+  
+  /*adjusts yhe contacts at bottom of page*/
+  .contact address {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  /*Contact links*/
+  .contact address a {
+    display: inline-block;
+    align-items:center;
+    border-radius: 25px;
+  }
+  
+  /*Contact links animations*/
+  .contact address a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: all 1s;
+  }
+  
+  /*Section picture properties*/
+  #bio-picture{
+    margin: auto;
+  }
+  
+  /*Bio text size*/
+  #bio-text{
+    font-size: 35px;
+  }
+  
+  /*Contact icon pictures*/
+  #phone, #email, #github, #linkedin{
+    margin: 15px;
+    width: 125px;
+    height: 100px;
+  }
+
+  /*Allows me to scroll to specific areas of the page*/
+#Bio{
+  scroll-margin-top: 200px;
+}
+#projects{
+  scroll-margin-top: 150px;
+}
+  
+  /*Media Query - Tablet*/
+  @media screen and (max-width: 980px) {
+    header {
+      padding: 0 0 10px 0;
+      justify-content: center;
+      text-align: center;
+    }
+  
+    header h1 {
+      display: block;
+      width: 100%;
+      padding: 5px;
+      margin: 0;
+      margin-bottom: 10px;
+      font-size: 10vw;
+    }
+  
+    header h3{
+      display: block;
+    }
+  
+    header nav {
+      justify-content: center;
+    }
+  
+    .content{
+      flex-direction: row;
+      width: auto;
+      align-items: center;
+    }
+  
+    .content > h2,
+    .content > figcaption {
+      flex: 0 0 97.5%;
+      margin: 0;
+    }
+  
+/* Mobile View */
+@media only screen and (max-width: 600px) {
+  .navbar {
+    background-color: rgb(186, 224, 236);
+  }
+  #pic {
+     width: 80%; 
+  }
+}
+
+  .row{
+      width: 80%;
+  }
+
+@media only screen and (max-width: 768px) {
+  .navbar {
+    background-color: rgb(170, 96, 106);
+  }
+  #pic {
+     width: 75%; 
+  }
+}
+
+  .row{
+      width: 80%;
+  }
+
+@media only screen and (max-width: 376px) {
+  .navbar {
+      background-color: darkgrey;
+  }
+
+  .navbar ul li{
+      flex-wrap: wrap;
+  }
+  
+  #pic {
+     width: 75%; 
+  }
+
+  .row{
+      width: 75%;
+  }
+}
+  }
